@@ -12,7 +12,7 @@ class DashboardPage(PageObject):
     Student dashboard, where the student can view
     courses she/he has registered for.
     """
-    url = "{base}/dashboard".format(base=BASE_URL)
+    url = "{base}/dashboard".format(base="http://edx.devstack.lms:18000")
 
     def is_browser_on_page(self):
         return self.q(css='.my-courses').present
